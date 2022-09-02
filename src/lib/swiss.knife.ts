@@ -8,9 +8,9 @@ import { JSONDBBuilder } from "./db.json";
 import { NetworkType, Web3Factory } from "./web3.factory";
 import { ERC20Token } from "./erc20.token";
 
-import PairedLPTABI from "../../abi/lp.pair.json";
-import ERC20ABI from "../../abi/erc20.json";
-import ERC20V1ABI from "../../abi/erc20.1.json";
+import PairedLPTABI from "../abi/lp.pair.json";
+import ERC20ABI from "../abi/erc20.json";
+import ERC20V1ABI from "../abi/erc20.1.json";
 
 const logger = LoggerFactory.getInstance().getLogger("SwissKnife");
 
@@ -60,7 +60,7 @@ export class SwissKnife {
         return this.web3.eth.abi.decodeParameter("address", hex);
     }
   }
-  
+
   public decodeArray(typesArray: Array<String | Object>, hex: string) {
     return this.web3.eth.abi.decodeParameters(typesArray, hex);
   }

@@ -1,4 +1,4 @@
-import BigNumber from 'bignumber.js';
+import BigNumber from "bignumber.js";
 export declare class ERC20Token {
     address: string;
     symbol: string;

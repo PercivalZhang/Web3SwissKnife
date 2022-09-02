@@ -34,9 +34,9 @@ const LoggerFactory_1 = require("./LoggerFactory");
 const db_json_1 = require("./db.json");
 const web3_factory_1 = require("./web3.factory");
 const erc20_token_1 = require("./erc20.token");
-const lp_pair_json_1 = __importDefault(require("../../abi/lp.pair.json"));
-const erc20_json_1 = __importDefault(require("../../abi/erc20.json"));
-const erc20_1_json_1 = __importDefault(require("../../abi/erc20.1.json"));
+const lp_pair_json_1 = __importDefault(require("../abi/lp.pair.json"));
+const erc20_json_1 = __importDefault(require("../abi/erc20.json"));
+const erc20_1_json_1 = __importDefault(require("../abi/erc20.1.json"));
 const logger = LoggerFactory_1.LoggerFactory.getInstance().getLogger("SwissKnife");
 var EVMDataType;
 (function (EVMDataType) {

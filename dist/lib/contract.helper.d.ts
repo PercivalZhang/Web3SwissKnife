@@ -1,5 +1,5 @@
 import Web3 from "web3";
-import { Contract } from "web3-eth-contract";
+import { AbiItem } from "web3-utils";
 import { Account, TransactionReceipt } from "web3-core";
 import { NetworkType } from "./web3.factory";
 export declare class ContractHelper {
@@ -7,8 +7,7 @@ export declare class ContractHelper {
     readonly address: string;
     private contract;
     private hideExceptionOutput;
-    constructor(address: string, abiFileName: string, network: NetworkType);
-    static getContractInstanceFromABI(address: string, abiJSONString: string, network: NetworkType): Contract;
+    constructor(address: string, abiJSON: AbiItem[], network: NetworkType);
     setDefaultBlock(blockNumber: number): void;
     toggleHiddenExceptionOutput(): void;
     getBlockHeight(): Promise<number>;

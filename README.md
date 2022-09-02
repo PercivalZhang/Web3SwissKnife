@@ -2,6 +2,17 @@
 
 Help to interact with Ether Contract
 
+# Sub Modules
+
+- contract.helper.ts
+  ETH Contract Wrapper
+- swap.router.ts
+  Swap Router Wrapper
+- swiss.knife.ts
+  All kinds of tools
+- web.factory.ts
+  Creat web3 RPC endpoint
+
 # Demo Code
 
 ```

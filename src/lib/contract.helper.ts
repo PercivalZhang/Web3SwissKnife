@@ -1,11 +1,9 @@
 import Web3 from "web3";
+import { AbiItem } from "web3-utils";
 import { LoggerFactory } from "./LoggerFactory";
 import BigNumber from "bignumber.js";
-import * as path from "path";
-import fs from "fs";
 import { Contract } from "web3-eth-contract";
 import { Account, TransactionReceipt } from "web3-core";
-
 import { Web3Factory, NetworkType } from "./web3.factory";
 
 const logger = LoggerFactory.getInstance().getLogger("ContractHelper");
@@ -18,27 +16,13 @@ export class ContractHelper {
   private contract: Contract;
   private hideExceptionOutput: boolean;
 
-  constructor(address: string, abiFileName: string, network: NetworkType) {
+  constructor(address: string, abiJSON: AbiItem[], network: NetworkType) {
     this.address = address;
 
     this.web3 = Web3Factory.getInstance().getWeb3(network);
 
-    const pathABIFile = path.resolve("abi", abiFileName);
-    const apiInterfaceContract = JSON.parse(
-      fs.readFileSync(pathABIFile).toString()
-    );
-    this.contract = new this.web3.eth.Contract(apiInterfaceContract, address);
+    this.contract = new this.web3.eth.Contract(abiJSON, address);
     this.hideExceptionOutput = false;
-  }
-
-  public static getContractInstanceFromABI(
-    address: string,
-    abiJSONString: string,
-    network: NetworkType
-  ): Contract {
-    const apiInterfaceContract = JSON.parse(abiJSONString);
-    const web3 = Web3Factory.getInstance().getWeb3(network);
-    return new web3.eth.Contract(apiInterfaceContract, address);
   }
 
   public setDefaultBlock(blockNumber: number) {
