@@ -50,3 +50,7 @@ main().catch((e) => {
 });
 
 ```
+
+# Demo project 
+
+Check how to use this module in [LPDoge](https://github.com/PercivalZhang/LPDoge)
