@@ -3,6 +3,7 @@ import { SwissKnife } from "./lib/swiss.knife";
 import { ContractHelper } from "./lib/contract.helper";
 import { LoggerFactory } from "./lib/LoggerFactory";
 import { SwapRouter } from "./lib/swap.router";
+import { ERC20Token } from "./lib/erc20.token";
 
 export = {
   NetworkFactory: {
@@ -13,4 +14,5 @@ export = {
   ContractHelper: ContractHelper,
   LoggerFactory: LoggerFactory,
   SwapRouter: SwapRouter,
+  ERC20Token: ERC20Token,
 };

@@ -7,7 +7,7 @@ Help to interact with Ether Contract
 - contract.helper.ts
   ETH Contract Wrapper
 - swap.router.ts
-  Swap Router Wrapper
+  DEX Swap Router Wrapper
 - swiss.knife.ts
   All kinds of tools
 - web.factory.ts
